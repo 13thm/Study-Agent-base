@@ -1,0 +1,10 @@
+{
+  "version": "2.0",
+  "name": "service-017",
+  "replicas": 4,
+  "tags": [
+    "web",
+    "rag"
+  ],
+  "enabled": true
+}

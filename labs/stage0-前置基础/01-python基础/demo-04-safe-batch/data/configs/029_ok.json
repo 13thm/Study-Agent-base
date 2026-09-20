@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "name": "service-029",
+  "replicas": 5,
+  "tags": [
+    "cache",
+    "agent"
+  ],
+  "enabled": false
+}

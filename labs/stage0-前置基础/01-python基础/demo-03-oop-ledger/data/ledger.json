@@ -1,0 +1,77 @@
+{
+  "owner": "小明",
+  "created_at": "2026-09-16T10:08:28",
+  "records": [
+    {
+      "title": "9月工资",
+      "value": 12000,
+      "source": "公司",
+      "tags": [
+        "主业"
+      ],
+      "_kind": "income"
+    },
+    {
+      "title": "房租",
+      "value": 2400,
+      "category": "住房",
+      "tags": [],
+      "_kind": "expense"
+    },
+    {
+      "title": "火锅聚餐",
+      "value": 380.5,
+      "category": "餐饮",
+      "tags": [
+        "社交"
+      ],
+      "_kind": "expense"
+    },
+    {
+      "title": "外卖",
+      "value": 820,
+      "category": "餐饮",
+      "tags": [],
+      "_kind": "expense"
+    },
+    {
+      "title": "地铁公交",
+      "value": 120.5,
+      "category": "交通",
+      "tags": [],
+      "_kind": "expense"
+    },
+    {
+      "title": "打车",
+      "value": 299.9,
+      "category": "交通",
+      "tags": [],
+      "_kind": "expense"
+    },
+    {
+      "title": "RTX 4070 显卡",
+      "value": 3980,
+      "category": "数码",
+      "tags": [
+        "跑模型"
+      ],
+      "_kind": "expense"
+    },
+    {
+      "title": "退货：机械键盘",
+      "value": 400,
+      "original_category": "数码",
+      "_kind": "refund"
+    }
+  ],
+  "summary": {
+    "count": 8,
+    "total": 4399.1,
+    "by_category": {
+      "数码": -3580.0,
+      "住房": -2400.0,
+      "餐饮": -1200.5,
+      "交通": -420.4
+    }
+  }
+}

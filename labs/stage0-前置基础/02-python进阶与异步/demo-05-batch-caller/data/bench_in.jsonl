@@ -1,0 +1,60 @@
+{"id": "q0001", "prompt": "用一句话解释混合检索", "topic": "混合检索"}
+{"id": "q0002", "prompt": "LangGraph 状态机 解决了什么问题？", "topic": "LangGraph 状态机"}
+{"id": "q0003", "prompt": "ReAct 范式 解决了什么问题？", "topic": "ReAct 范式"}
+{"id": "q0004", "prompt": "对比一下 混合检索 与其他方案的优劣", "topic": "混合检索"}
+{"id": "q0005", "prompt": "对比一下 Embedding 模型 与其他方案的优劣", "topic": "Embedding 模型"}
+{"id": "q0006", "prompt": "用一句话解释提示注入防护", "topic": "提示注入防护"}
+{"id": "q0007", "prompt": "用一句话解释RAG 检索增强生成", "topic": "RAG 检索增强生成"}
+{"id": "q0008", "prompt": "Function Calling 解决了什么问题？", "topic": "Function Calling"}
+{"id": "q0009", "prompt": "对比一下 SSE 流式输出 与其他方案的优劣", "topic": "SSE 流式输出"}
+{"id": "q0010", "prompt": "对比一下 RAG 检索增强生成 与其他方案的优劣", "topic": "RAG 检索增强生成"}
+{"id": "q0011", "prompt": "对比一下 Function Calling 与其他方案的优劣", "topic": "Function Calling"}
+{"id": "q0012", "prompt": "提示注入防护 解决了什么问题？", "topic": "提示注入防护"}
+{"id": "q0013", "prompt": "对比一下 多租户隔离 与其他方案的优劣", "topic": "多租户隔离"}
+{"id": "q0014", "prompt": "用一句话解释LangGraph 状态机", "topic": "LangGraph 状态机"}
+{"id": "q0015", "prompt": "Chunk 分块策略 有哪些常见的坑？", "topic": "Chunk 分块策略"}
+{"id": "q0016", "prompt": "在 Agent 项目里，Agent 记忆系统 通常怎么用？", "topic": "Agent 记忆系统"}
+{"id": "q0017", "prompt": "Rerank 重排 解决了什么问题？", "topic": "Rerank 重排"}
+{"id": "q0018", "prompt": "用一句话解释Agent 记忆系统", "topic": "Agent 记忆系统"}
+{"id": "q0019", "prompt": "Embedding 模型 有哪些常见的坑？", "topic": "Embedding 模型"}
+{"id": "q0020", "prompt": "在 Agent 项目里，混合检索 通常怎么用？", "topic": "混合检索"}
+{"id": "q0021", "prompt": "对比一下 Prompt Caching 与其他方案的优劣", "topic": "Prompt Caching"}
+{"id": "q0022", "prompt": "用一句话解释LangGraph 状态机", "topic": "LangGraph 状态机"}
+{"id": "q0023", "prompt": "对比一下 多租户隔离 与其他方案的优劣", "topic": "多租户隔离"}
+{"id": "q0024", "prompt": "混合检索 有哪些常见的坑？", "topic": "混合检索"}
+{"id": "q0025", "prompt": "对比一下 Embedding 模型 与其他方案的优劣", "topic": "Embedding 模型"}
+{"id": "q0026", "prompt": "对比一下 HITL 人工审批 与其他方案的优劣", "topic": "HITL 人工审批"}
+{"id": "q0027", "prompt": "对比一下 Prompt Caching 与其他方案的优劣", "topic": "Prompt Caching"}
+{"id": "q0028", "prompt": "用一句话解释Function Calling", "topic": "Function Calling"}
+{"id": "q0029", "prompt": "向量数据库 解决了什么问题？", "topic": "向量数据库"}
+{"id": "q0030", "prompt": "用一句话解释HITL 人工审批", "topic": "HITL 人工审批"}
+{"id": "q0031", "prompt": "用一句话解释ReAct 范式", "topic": "ReAct 范式"}
+{"id": "q0032", "prompt": "在 Agent 项目里，上下文窗口 通常怎么用？", "topic": "上下文窗口"}
+{"id": "q0033", "prompt": "在 Agent 项目里，多租户隔离 通常怎么用？", "topic": "多租户隔离"}
+{"id": "q0034", "prompt": "在 Agent 项目里，Chunk 分块策略 通常怎么用？", "topic": "Chunk 分块策略"}
+{"id": "q0035", "prompt": "Prompt Caching 解决了什么问题？", "topic": "Prompt Caching"}
+{"id": "q0036", "prompt": "用一句话解释LangGraph 状态机", "topic": "LangGraph 状态机"}
+{"id": "q0037", "prompt": "评测集构建 解决了什么问题？", "topic": "评测集构建"}
+{"id": "q0038", "prompt": "Docker 多阶段构建 解决了什么问题？", "topic": "Docker 多阶段构建"}
+{"id": "q0039", "prompt": "Chunk 分块策略 有哪些常见的坑？", "topic": "Chunk 分块策略"}
+{"id": "q0040", "prompt": "在 Agent 项目里，上下文窗口 通常怎么用？", "topic": "上下文窗口"}
+{"id": "q0041", "prompt": "Docker 多阶段构建 解决了什么问题？", "topic": "Docker 多阶段构建"}
+{"id": "q0042", "prompt": "用一句话解释Agent 记忆系统", "topic": "Agent 记忆系统"}
+{"id": "q0043", "prompt": "用一句话解释ReAct 范式", "topic": "ReAct 范式"}
+{"id": "q0044", "prompt": "Agent 记忆系统 有哪些常见的坑？", "topic": "Agent 记忆系统"}
+{"id": "q0045", "prompt": "用一句话解释LangGraph 状态机", "topic": "LangGraph 状态机"}
+{"id": "q0046", "prompt": "对比一下 Function Calling 与其他方案的优劣", "topic": "Function Calling"}
+{"id": "q0047", "prompt": "Agent 记忆系统 解决了什么问题？", "topic": "Agent 记忆系统"}
+{"id": "q0048", "prompt": "Celery 异步任务 有哪些常见的坑？", "topic": "Celery 异步任务"}
+{"id": "q0049", "prompt": "多租户隔离 解决了什么问题？", "topic": "多租户隔离"}
+{"id": "q0050", "prompt": "LangGraph 状态机 解决了什么问题？", "topic": "LangGraph 状态机"}
+{"id": "q0051", "prompt": "对比一下 ReAct 范式 与其他方案的优劣", "topic": "ReAct 范式"}
+{"id": "q0052", "prompt": "在 Agent 项目里，Docker 多阶段构建 通常怎么用？", "topic": "Docker 多阶段构建"}
+{"id": "q0053", "prompt": "Prometheus 指标 有哪些常见的坑？", "topic": "Prometheus 指标"}
+{"id": "q0054", "prompt": "Prometheus 指标 有哪些常见的坑？", "topic": "Prometheus 指标"}
+{"id": "q0055", "prompt": "Prompt Caching 解决了什么问题？", "topic": "Prompt Caching"}
+{"id": "q0056", "prompt": "对比一下 Rerank 重排 与其他方案的优劣", "topic": "Rerank 重排"}
+{"id": "q0057", "prompt": "用一句话解释Celery 异步任务", "topic": "Celery 异步任务"}
+{"id": "q0058", "prompt": "用一句话解释向量数据库", "topic": "向量数据库"}
+{"id": "q0059", "prompt": "Rerank 重排 解决了什么问题？", "topic": "Rerank 重排"}
+{"id": "q0060", "prompt": "对比一下 提示注入防护 与其他方案的优劣", "topic": "提示注入防护"}

@@ -1,0 +1,20 @@
+{"id":"s01","kind":"合法-最简","raw":{"session_id":"sess-1","steps":[{"thought":"先读文件","action":{"name":"read_file","args":{"path":"a.txt"}},"observation":"内容...","latency_ms":120}]}}
+{"id":"s02","kind":"合法-数字是字符串","raw":{"session_id":"sess-2","steps":[{"thought":"计算","action":{"name":"calculator","args":{"expression":"1+1"}},"observation":"2","latency_ms":"120"}],"total_cost_tokens":"842"}}
+{"id":"s03","kind":"合法-args是JSON字符串","raw":{"session_id":"sess-3","steps":[{"thought":"搜索","action":{"name":"search","args":"{\"q\":\"RAG\"}"},"observation":"5 hits","latency_ms":"340ms"}]}}
+{"id":"s04","kind":"合法-空observation变None","raw":{"session_id":"sess-4","steps":[{"thought":"直接回答，不调工具","action":null,"observation":"","latency_ms":0}]}}
+{"id":"s05","kind":"合法-带risk枚举","raw":{"session_id":"sess-5","steps":[{"thought":"删文件","action":{"name":"delete_file","args":{"path":"tmp/x"}},"observation":"deleted","latency_ms":30,"risk":"dangerous"}]}}
+{"id":"s06","kind":"合法-多步","raw":{"session_id":"sess-6","steps":[{"thought":"列目录","action":{"name":"list_files","args":{}},"observation":"a.txt,b.txt","latency_ms":5},{"thought":"读a","action":{"name":"read_file","args":{"path":"a.txt"}},"observation":"...","latency_ms":12}],"finished":true,"mode":"react"}}
+{"id":"s07","kind":"合法-工具名带反引号","raw":{"session_id":"sess-7","steps":[{"thought":"调用","action":{"name":"`read_file`","args":{}},"observation":"ok","latency_ms":9}]}}
+{"id":"s08","kind":"合法-latency带单位","raw":{"session_id":"sess-8","steps":[{"thought":"x","action":null,"observation":null,"latency_ms":"1.5s"}]}}
+{"id":"s09","kind":"合法-千分位","raw":{"session_id":"sess-9","steps":[{"thought":"x","action":null,"observation":null,"latency_ms":"1,240"}]}}
+{"id":"s10","kind":"合法-mode枚举","raw":{"session_id":"s10","mode":"plan_execute","steps":[{"thought":"规划","action":null,"observation":null,"latency_ms":800}]}}
+{"id":"s11","kind":"合法-total_cost缺省","raw":{"session_id":"s11","steps":[{"thought":"x","action":null,"observation":null}]}}
+{"id":"s12","kind":"合法-args为null","raw":{"session_id":"s12","steps":[{"thought":"x","action":{"name":"ping","args":null},"observation":"pong","latency_ms":3}]}}
+{"id":"s13","kind":"脏-steps为空数组","raw":{"session_id":"s13","steps":[]}}
+{"id":"s14","kind":"脏-latency负数","raw":{"session_id":"s14","steps":[{"thought":"x","action":null,"observation":null,"latency_ms":-5}]}}
+{"id":"s15","kind":"脏-多余字段","raw":{"session_id":"s15","steps":[{"thought":"x","action":null,"observation":null,"latency_ms":1,"extra_info":"模型自己加的"}]}}
+{"id":"s16","kind":"脏-缺thought","raw":{"session_id":"s16","steps":[{"action":null,"observation":null,"latency_ms":1}]}}
+{"id":"s17","kind":"脏-有action无observation","raw":{"session_id":"s17","steps":[{"thought":"读文件","action":{"name":"read_file","args":{"path":"a"}},"latency_ms":10}]}}
+{"id":"s18","kind":"脏-risk非法枚举值","raw":{"session_id":"s18","steps":[{"thought":"x","action":null,"observation":null,"latency_ms":1,"risk":"super_dangerous"}]}}
+{"id":"s19","kind":"脏-session_id缺失","raw":{"steps":[{"thought":"x","action":null,"observation":null,"latency_ms":1}]}}
+{"id":"s20","kind":"脏-args字符串非法JSON","raw":{"session_id":"s20","steps":[{"thought":"x","action":{"name":"f","args":"{path: a.txt}"},"observation":"ok","latency_ms":1}]}}

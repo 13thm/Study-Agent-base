@@ -1,0 +1,30 @@
+# Demo 03-5 · 一主两从的负载均衡实验环境
+# 起：docker compose up -d      验证：bash verify.sh      停：docker compose down
+services:
+  api1:
+    image: python:3.12-slim
+    working_dir: /app
+    volumes: ["../../fastapi-chat-backend:/app:ro"]
+    command: >
+      sh -c "pip install -q fastapi 'uvicorn[standard]' httpx pydantic-settings fakeredis
+             && uvicorn app.main:app --host 0.0.0.0 --port 8000 --log-level warning"
+    environment: {APP_ENV: dev, APP_USE_FAKE_REDIS: "1"}
+    healthcheck: {test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://localhost:8000/health/live')"], interval: 10s, timeout: 3s, retries: 12}
+
+  api2:
+    image: python:3.12-slim
+    working_dir: /app
+    volumes: ["../../fastapi-chat-backend:/app:ro"]
+    command: >
+      sh -c "pip install -q fastapi 'uvicorn[standard]' httpx pydantic-settings fakeredis
+             && uvicorn app.main:app --host 0.0.0.0 --port 8000 --log-level warning"
+    environment: {APP_ENV: dev, APP_USE_FAKE_REDIS: "1"}
+    healthcheck: {test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://localhost:8000/health/live')"], interval: 10s, timeout: 3s, retries: 12}
+
+  nginx:
+    image: nginx:1.27-alpine
+    ports: ["8080:80"]
+    volumes: ["./nginx.conf:/etc/nginx/conf.d/default.conf:ro"]
+    depends_on:
+      api1: {condition: service_healthy}
+      api2: {condition: service_healthy}

@@ -1,0 +1,56 @@
+# 模块 05 的依赖服务 —— 跑真实 Celery 需要 Redis 作 Broker
+# 起：docker compose up -d
+# 然后：cd ../fastapi-chat-backend
+#       celery -A app.tasks.celery_app worker -l info -Q default,heavy,dead_letter -c 2
+#       celery -A app.tasks.celery_app beat -l info          # 定时任务（另开终端）
+#       flower --broker=redis://localhost:6379/1             # 监控面板（可选）
+services:
+  redis:
+    image: redis:7-alpine
+    ports: ["6379:6379"]
+    command: redis-server --appendonly yes
+    volumes: ["redisdata:/data"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  worker:
+    image: python:3.12-slim
+    working_dir: /app
+    volumes: ["../fastapi-chat-backend:/app"]
+    command: >
+      sh -c "pip install -q celery[redis] fastapi pydantic-settings httpx sqlalchemy redis fakeredis
+             && celery -A app.tasks.celery_app worker -l info -Q default,heavy,dead_letter -c 2"
+    environment:
+      APP_REDIS_URL: redis://redis:6379/0
+      APP_USE_FAKE_REDIS: "0"
+    depends_on:
+      redis: {condition: service_healthy}
+
+  beat:
+    image: python:3.12-slim
+    working_dir: /app
+    volumes: ["../fastapi-chat-backend:/app"]
+    command: >
+      sh -c "pip install -q celery[redis] fastapi pydantic-settings httpx sqlalchemy redis fakeredis
+             && celery -A app.tasks.celery_app beat -l info"
+    environment:
+      APP_REDIS_URL: redis://redis:6379/0
+      APP_USE_FAKE_REDIS: "0"
+    depends_on:
+      redis: {condition: service_healthy}
+
+  flower:
+    image: python:3.12-slim
+    working_dir: /app
+    ports: ["5555:5555"]
+    command: >
+      sh -c "pip install -q flower celery[redis] && flower --broker=redis://redis:6379/1 --port=5555"
+    depends_on:
+      redis: {condition: service_healthy}
+    profiles: ["monitoring"]
+
+volumes:
+  redisdata:
